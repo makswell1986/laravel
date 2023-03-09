@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Annoucement extends Model
 {
     use HasFactory;
+   /*  protected $fillable = ['category','slug','tags','title','body']; */
 }

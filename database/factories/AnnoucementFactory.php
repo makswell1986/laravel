@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,13 @@ class AnnoucementFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+           
+            'category'=> Category::factory(),
+            'slug'=>$this->faker->slug,
+            'tags'=>$this->faker->word,
+            'title'=>$this->faker->sentence,
+            'body'=>$this->faker->text
+          
         ];
     }
 }
