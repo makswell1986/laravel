@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('annoucements', function (Blueprint $table) {
             $table->id();
             $table->integer('category');
-            $table->string('slug',50);
+            $table->string('slug',250);
             $table->string('tags',200);
             $table->string('title',150);
             $table->text('body');
