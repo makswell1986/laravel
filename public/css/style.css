@@ -1,0 +1,28 @@
+.navigation{
+   border-bottom: 1px solid #dee2e6;
+}
+.header {
+    background-image: url('../img/2072.jpg');
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+.section {
+    width: 60%;
+    max-width: 100%;
+    box-shadow: 0 .125rem .25rem rgba(var(--bs-body-color-rgb),.075) !important;
+    padding:1%;
+    margin:2% auto;
+}
+.title {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.time {
+    font-size: small;
+    color: #adb5bd;
+}
+.body {
+    margin-top: 1%;
+}
