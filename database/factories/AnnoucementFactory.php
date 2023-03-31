@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Category;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -20,8 +21,8 @@ class AnnoucementFactory extends Factory
         return [
            
             'category'=> Category::factory(),
+            'user'=> User::factory(),
             'slug'=>$this->faker->slug,
-            'tags'=>$this->faker->word,
             'title'=>$this->faker->sentence,
             'body'=>$this->faker->text
           

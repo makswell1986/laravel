@@ -1,11 +1,13 @@
 <x-layout>
 
 <div class='container'>
-<div class='section'>
-<div class='title'>Featured post</div>    
-<div class='time'>Nov 12 / <a href='#'>private</a></div>    
-<div class='body'>This is a wider card with supporting text below as a natural lead-in to additional content.</div>    
-</div>
+ @foreach($posts as $elem)
 
+<div class='section'>
+<div class='title'>{{ $elem['title'] }}</div>    
+<div class='time'>{{ $elem['updated_at'] }} / <a href='#'>{{ $elem['tags'] }}</a></div>    
+<div class='body'>{{ $elem['body'] }}</div>    
+</div>
+@endforeach
 </div>
 </x-layout>
