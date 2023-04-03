@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AnnoucementController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [AnnoucementController::class,'show']);
+Route::get('/category/{elem}', [CategoryController::class,'show']);

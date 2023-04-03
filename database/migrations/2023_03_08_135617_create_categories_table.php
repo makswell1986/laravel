@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('annoucement_id');
             $table->string('slug',250);
             $table->string('tags',20);
             $table->dateTime('created_at');

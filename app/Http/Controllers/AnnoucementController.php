@@ -9,9 +9,8 @@ class AnnoucementController extends Controller
 {
     public function show(){
        $rec=Annoucement::all();
-       foreach($rec as $elem){
-        dd($elem->getTag());
-       };
+      
+            
        return view('announcements',['posts'=>$rec]); 
     }
 }

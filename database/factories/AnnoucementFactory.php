@@ -20,8 +20,8 @@ class AnnoucementFactory extends Factory
     {
         return [
            
-            'category'=> Category::factory(),
-            'user'=> User::factory(),
+            'category_id'=> Category::factory(),
+            'user_id'=> User::factory(),
             'slug'=>$this->faker->slug,
             'title'=>$this->faker->sentence,
             'body'=>$this->faker->text

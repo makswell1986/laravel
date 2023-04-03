@@ -14,8 +14,8 @@ return new class extends Migration
     {
         Schema::create('annoucements', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('category');
-            $table->foreignId('user');
+            $table->foreignId('category_id');
+            $table->foreignId('user_id');
             $table->string('slug',250);
             $table->string('title',150);
             $table->text('body');
