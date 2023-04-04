@@ -17,7 +17,7 @@ class CategoryFactory extends Factory
     public function definition(): array
     {
         return [
-            'annoucement_id'=> Annoucement::factory(),
+            
             'slug'=>$this->faker->slug,
             'tags'=>$this->faker->word,
             
