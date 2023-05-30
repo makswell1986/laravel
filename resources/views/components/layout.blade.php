@@ -13,7 +13,15 @@
 
         <!-- Styles -->
             </head>
+
+            
+       <div class='container'>
+       <div class='float-end mt-1 mb-1'><a href='/get-form'>Добавить историю</a></div>
+       <a href='/'><img src='/img/2072.jpg'></a>
+       </div>
     <body class="antialiased">
        {{ $slot }} 
+
+
     </body>
 </html>
