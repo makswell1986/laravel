@@ -15,7 +15,7 @@
     <select class="form-select" name='tag'>
     
     @foreach($posts as $post)
-        <option>{{ $post->tags }}</option>
+        <option value="{{ $post->annoucement_id }}">{{ $post->tags }}</option>
     
     @endforeach
 </select>
@@ -23,11 +23,19 @@
  
   <div class="mb-3">
   <label for="text" class="form-label">Текст</label>
-    <textarea class='form-control' id='text' name='text'>
-
-    </textarea>
+    <textarea class='form-control' id='text' name='text'></textarea>
+    @error('text')
+    <p class='mt-1 mb-1 text-red'>{{ $message }}</p>
+    @enderror
       </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+<div>
+@if (session()->has('success'))
+<div class="text-bg-primary p-3">
+{{ session('success')}}
+</div>
+@endif
+</div>
 </div>
 </x-layout>
