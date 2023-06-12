@@ -6,6 +6,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use DB;
 use Str;
+use Illuminate\Support\Facades\Validator;
 
 class FormController extends Controller
 {
@@ -22,15 +23,21 @@ public function show (){
 
     public function store(Request $request) {
         
-      
-        $validated = $request->validate([
-    
+
+
+      $validator=Validator::make($request->all(),[
+        
         'title' => 'required|min:5',
         'tag' => 'required',
         'text' => 'required'
-        
-        
-]);
+      ]);
+      
+      if ($validator->stopOnFirstFailure()->fails()) {
+        return redirect('/get-form')
+                    ->withErrors($validator)
+                    ->withInput();
+    }      
+
 
 
 

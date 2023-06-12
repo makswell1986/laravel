@@ -32,7 +32,7 @@
 </form>
 <div>
 @if (session()->has('success'))
-<div class="text-bg-primary p-3">
+<div class="text-bg-primary p-3 mt-1 text-center">
 {{ session('success')}}
 </div>
 @endif

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,6 +16,7 @@
 
             
        <div class='container'>
+       {{ __('Welcome to our website') }}
        <div class='float-end mt-1 mb-1'><a href='/get-form'>Добавить историю</a></div>
        <a href='/'><img src='/img/2072.jpg'></a>
        </div>
