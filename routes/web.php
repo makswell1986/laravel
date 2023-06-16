@@ -6,6 +6,7 @@ use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +18,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{locale}', [AnnoucementController::class,'show']);
-Route::get('/{locale}/category/{elem}', [CategoryController::class,'show']);
-Route::get('/{locale}/form', [FormController::class,'store']);
-Route::get('/{locale}/get-form', [FormController::class,'show']);
+Route::redirect('/','/en');
+
+Route::group(['prefix'=>'{locale}'],function () {
+
+Route::get('/', [AnnoucementController::class,'show'])->name('lang');
+Route::get('/category/{elem}', [CategoryController::class,'show']);
+Route::get('/form', [FormController::class,'store']);
+Route::get('/get-form', [FormController::class,'show']);
+
+});

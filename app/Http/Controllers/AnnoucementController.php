@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 
 class AnnoucementController extends Controller
 {
-    public function show(){
-       $rec=Annoucement::all();
+    public function show(Request $request){
+       
+        $rec=Annoucement::all();
      
                    
        return view('announcements',['posts'=>$rec]); 

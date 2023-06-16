@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,10 +15,22 @@
         <!-- Styles -->
             </head>
 
+      
             
        <div class='container'>
-       {{ __('Welcome to our website') }}
-       <div class='float-end mt-1 mb-1'><a href='/get-form'>Добавить историю</a></div>
+       <div class='row'>
+       <div class='col'>
+    
+      {{ Route::current()->uri() }}
+
+
+      <li><a href="{{ route('lang',['locale'=>'en']) }}">en</a></li>
+        <li><a href="{{ route('lang',['locale'=>'ru']) }}">ру</a></li> 
+        
+        
+       </div>
+       <div class='col'><a href='{{ app()->getLocale() }}/get-form'>{{ __('add history') }}</a></div>
+</div>
        <a href='/'><img src='/img/2072.jpg'></a>
        </div>
     <body class="antialiased">
