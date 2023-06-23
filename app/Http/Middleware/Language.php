@@ -6,6 +6,8 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\URL;
 
 
 class Language
@@ -17,11 +19,9 @@ class Language
      */
     public function handle(Request $request, Closure $next): Response
     {
-      
-             
+              
             App::setLocale($request->locale);
-        
-        
+                
         return $next($request);
     }
 }

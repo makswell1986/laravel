@@ -20,16 +20,19 @@
        <div class='container'>
        <div class='row'>
        <div class='col'>
-    
-      {{ Route::current()->uri() }}
+
+      
 
 
-      <li><a href="{{ route('lang',['locale'=>'en']) }}">en</a></li>
-        <li><a href="{{ route('lang',['locale'=>'ru']) }}">ру</a></li> 
+      <!-- {{ Request::path() }}     -->
+
+
+<li><a href="/en/{{ Str::substr(Request::path(),3 ) }}">en</a></li>
+        <li><a href="/ru/{{ Str::substr(Request::path(),3 ) }}">ру</a></li>
         
         
        </div>
-       <div class='col'><a href='{{ app()->getLocale() }}/get-form'>{{ __('add history') }}</a></div>
+       <div class='col'><a href='/{{ app()->getLocale() }}/get-form'>{{ __('add history') }}</a></div>
 </div>
        <a href='/'><img src='/img/2072.jpg'></a>
        </div>

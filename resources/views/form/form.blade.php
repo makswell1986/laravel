@@ -1,9 +1,9 @@
 <x-layout>
  <div class='container'>
-    <div class='text-center mt-1 mb-1'><h2>Добавить историю</h2></div>
-<form method='get' action='/form'>
+    <div class='text-center mt-1 mb-1'><h2>{{ __('add history')}}</h2></div>
+<form method='get' action='/{{app()->getLocale()}}/form'>
   <div class="mb-3">
-    <label for="title" class="form-label">Название</label>
+    <label for="title" class="form-label">{{__('title')}}</label>
     <input type="text" class="form-control" id="title" aria-describedby="title" name='title'>
     @error('title')
     <p class='mt-1 mb-1 text-red'>{{ $message }}</p>
@@ -11,7 +11,7 @@
     <div id="title" class="form-text"></div>
   </div>
   <div class="mb-3">
-    <label for="tag" class="form-label">Тэг</label>
+    <label for="tag" class="form-label">{{__('tag')}}</label>
     <select class="form-select" name='tag'>
     
     @foreach($posts as $post)
@@ -22,13 +22,13 @@
   </div>
  
   <div class="mb-3">
-  <label for="text" class="form-label">Текст</label>
+  <label for="text" class="form-label">{{__('text')}}</label>
     <textarea class='form-control' id='text' name='text'></textarea>
     @error('text')
     <p class='mt-1 mb-1 text-red'>{{ $message }}</p>
     @enderror
       </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">{{__('submit')}}</button>
 </form>
 <div>
 @if (session()->has('success'))

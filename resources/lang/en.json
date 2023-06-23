@@ -2,6 +2,10 @@
 
     
     "Welcome to our website": "Welcome to our website",
-    "add history": "Add history"
+    "add history": "Add history",
+    "title":"Title",
+    "tag":"Tag",
+    "text":"text",
+    "submit":"Submit"
 
 }
