@@ -9,7 +9,7 @@ class AnnoucementController extends Controller
 {
     public function show(Request $request){
        
-        $rec=Annoucement::all();
+        $rec=Annoucement::all();    
      
                    
        return view('announcements',['posts'=>$rec]); 

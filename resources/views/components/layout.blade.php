@@ -27,12 +27,15 @@
       <!-- {{ Request::path() }}     -->
 
 
-<li><a href="/en/{{ Str::substr(Request::path(),3 ) }}">en</a></li>
-        <li><a href="/ru/{{ Str::substr(Request::path(),3 ) }}">ру</a></li>
+
+
+        <li><a href="{{ route(Route::currentRouteName(),['locale'=>'en']) }}">en</a></li>
+        <li><a href="{{ route(Route::currentRouteName(),['locale'=>'ru']) }}">ру</a></li>
+
         
         
        </div>
-       <div class='col'><a href='/{{ app()->getLocale() }}/get-form'>{{ __('add history') }}</a></div>
+       <div class='col'><a href='{{ route("get-form",["locale"=>app()->getLocale()]) }}'>{{ __('add history') }}</a></div>
 </div>
        <a href='/'><img src='/img/2072.jpg'></a>
        </div>

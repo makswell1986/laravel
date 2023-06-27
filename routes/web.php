@@ -20,11 +20,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::redirect('/','/en');
 
-Route::prefix(app()->getLocale())->group(function () {
+Route::prefix('{locale}')->group(function () {
 
-Route::get('/', [AnnoucementController::class,'show']);
-Route::get('/category/{elem}', [CategoryController::class,'show']);
-Route::get('/form', [FormController::class,'store']);
-Route::get('/get-form', [FormController::class,'show']);
+Route::get('/', [AnnoucementController::class,'show'])->name('all');
+Route::get('/category/{elem}', [CategoryController::class,'show'])->name('category');
+Route::get('/form', [FormController::class,'store'])->name('form');
+Route::get('/get-form', [FormController::class,'show'])->name('get-form');
 
 });

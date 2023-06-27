@@ -19,7 +19,7 @@ class Language
      */
     public function handle(Request $request, Closure $next): Response
     {
-              
+                            
             App::setLocale($request->locale);
                 
         return $next($request);

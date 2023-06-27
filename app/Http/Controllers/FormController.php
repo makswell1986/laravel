@@ -23,7 +23,7 @@ public function show (){
 
     public function store(Request $request) {
         
-
+      
 
       $validator=Validator::make($request->all(),[
         
@@ -33,7 +33,7 @@ public function show (){
       ]);
       
       if ($validator->stopOnFirstFailure()->fails()) {
-        return redirect('/get-form')
+        return redirect(route('get-form',['locale'=>app()->getLocale()]))
                     ->withErrors($validator)
                     ->withInput();
     }      
@@ -52,7 +52,7 @@ public function show (){
 
  session()->flash('success','Успешно сохранено');
 
- return redirect('/get-form');
+ return redirect(route('get-form',['locale'=>app()->getLocale()]));
 
     }
 
