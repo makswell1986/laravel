@@ -9,9 +9,11 @@ class AnnoucementController extends Controller
 {
     public function show(Request $request){
        
-        $rec=Annoucement::all();    
+        $rec=Annoucement::latest()->paginate();
+        
+      
      
                    
-       return view('announcements',['posts'=>$rec]); 
+       return view('announcements',['posts'=>$rec]);
     }
 }

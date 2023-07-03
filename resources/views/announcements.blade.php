@@ -9,5 +9,7 @@
 <div class='body'>{{ $elem['body'] }}</div>    
 </div>
 @endforeach
+<div class='text-center'>
+{{ $posts->links() }}
 </div>
 </x-layout>
