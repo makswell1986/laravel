@@ -3,6 +3,7 @@
 use App\Http\Controllers\AnnoucementController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\ProviderController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -26,5 +27,7 @@ Route::get('/', [AnnoucementController::class,'show'])->name('all');
 Route::get('/category/{elem}', [CategoryController::class,'show'])->name('category');
 Route::get('/form', [FormController::class,'store'])->name('form');
 Route::get('/get-form', [FormController::class,'show'])->name('get-form');
+/* Route::get('?page=', [FormController::class,'show'])->name('page'); */
+Route::get('/provider', [ProviderController::class,'show']);
 
 });
