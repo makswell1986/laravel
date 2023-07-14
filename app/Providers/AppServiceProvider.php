@@ -2,8 +2,11 @@
 
 namespace App\Providers;
 
+use App\Utilities\Notification;
+use App\Utilities\Telegramm;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -12,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(Notification::class,Telegramm::class);
     }
 
     /**
