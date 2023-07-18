@@ -4,14 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Interfaces\PaymentInterface;
 
+use App\Providers\AppServiceProvider;
 use Illuminate\Http\Request;
 
 class PaypalController extends Controller
 {
 
-    public function show(Request $request, PaymentInterface $amount){
+    public function show(Request $request,  $amount){
 
-     dd(response()->json(['data']=$amount->send($request->pay)));
+
+dd($request);
+
+     /* dd(response()->json(['data']=$amount->send($request->pay))); */
 
     }
 }

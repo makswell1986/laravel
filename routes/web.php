@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\AnnoucementController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\FormController;
-use App\Http\Controllers\ProviderController;
+
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FormController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProviderController;
+use App\Http\Controllers\AnnoucementController;
 
 
 
@@ -18,6 +19,11 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+
+
+
 
 Route::redirect('/','/en');
 

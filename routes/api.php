@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Annoucement;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QiwiController;
@@ -22,13 +23,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::get('/api/paypal',function (){
 
-    return 'hi';
 
-});
-
-/* 
-Route::get('/api/paypal',[PaypalController::class,'show']);
-Route::post('/api/qiwi',[QiwiController::class,'show']);
-Route::post('/api/visa',[VisaController::class,'show']); */
+ 
+Route::get('/paypal',[PaypalController::class,'show']);
+Route::post('/qiwi',[QiwiController::class,'show']);
+Route::post('/visa',[VisaController::class,'show']);

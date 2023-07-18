@@ -13,7 +13,7 @@ class ProviderProvider extends ServiceProvider
      */
     public function register(): void
     {
-       $this->app->singleton(ProviderServicervice::class,function ($app){
+       $this->app->singleton(ProviderService::class,function ($app){
         return new ProviderService();
        });
     }
