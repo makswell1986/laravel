@@ -2,6 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\QiwiController;
+use App\Http\Controllers\VisaController;
+use App\Http\Controllers\PaypalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +20,15 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::get('/api/paypal',function (){
+
+    return 'hi';
+
+});
+
+/* 
+Route::get('/api/paypal',[PaypalController::class,'show']);
+Route::post('/api/qiwi',[QiwiController::class,'show']);
+Route::post('/api/visa',[VisaController::class,'show']); */
